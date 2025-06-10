@@ -20,5 +20,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="home")
+    path('', views.home, name="home"),
+    path('uso_contexto/<int:id>/<str:nombre>/<str:apellido>/<int:edad>', views.usoDinamico, name="usoDinamico"),
 ]
